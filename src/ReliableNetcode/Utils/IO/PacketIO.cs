@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
 
 namespace ReliableNetcode.Utils
 {
-	internal static class PacketIO
+    internal static class PacketIO
 	{
 		public static bool SequenceGreaterThan(ushort s1, ushort s2)
 		{

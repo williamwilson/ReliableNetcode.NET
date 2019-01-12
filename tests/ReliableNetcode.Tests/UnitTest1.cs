@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using ReliableNetcode;
+using Xunit;
 
-namespace UnitTestProject1
+namespace ReliableNetcode.Tests
 {
-	[TestClass]
 	public class UnitTest1
 	{
 		// tests with randomness are run this many times to ensure tests are unlikely to randomly pass
@@ -15,7 +13,7 @@ namespace UnitTestProject1
 		/// <summary>
 		/// All messages are sent through the Reliable channel with no packet loss. All messages should be received.
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void TestBasicSending()
 		{
 			List<byte> sentPackets = new List<byte>();
@@ -76,7 +74,7 @@ namespace UnitTestProject1
 		/// <summary>
 		/// Test ushort message ID wrapping
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void TestIDWrapping()
 		{
 			List<byte> sentPackets = new List<byte>();
@@ -135,7 +133,7 @@ namespace UnitTestProject1
 		/// <summary>
 		/// Packets are sent through the Reliable channel with random packet loss. All packets should be received
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void TestReliability()
 		{
 			Random rand = new Random();
@@ -210,7 +208,7 @@ namespace UnitTestProject1
 		/// <summary>
 		/// All packets are sent through the Unreliable channel with no packet loss. All packets should be received.
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void TestBasicUnreliable()
 		{
 			List<byte> sentPackets = new List<byte>();
@@ -262,7 +260,7 @@ namespace UnitTestProject1
 		/// <summary>
 		/// All packets are sent through the UnreliableOrdered channel with no packet loss. All packets should be received.
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void TestBasicUnreliableOrdered()
 		{
 			List<byte> sentPackets = new List<byte>();
@@ -314,7 +312,7 @@ namespace UnitTestProject1
 		/// <summary>
 		/// All packets are sent through the UnreliableOrdered channel with random reordering. Received packets should be in order.
 		/// </summary>
-		[TestMethod]
+		[Fact]
 		public void TestUnreliableOrderedSequence()
 		{
 			Random rand = new Random();

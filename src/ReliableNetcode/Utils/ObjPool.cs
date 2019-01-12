@@ -1,11 +1,8 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ReliableNetcode.Utils
 {
-	internal static class ObjPool<T> where T : new()
+    internal static class ObjPool<T> where T : new()
 	{
 		private static Queue<T> pool = new Queue<T>();
 

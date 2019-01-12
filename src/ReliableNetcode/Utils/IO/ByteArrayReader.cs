@@ -1,15 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
 
 namespace ReliableNetcode.Utils
 {
-	/// <summary>
-	/// Helper class for a quick non-allocating way to read or write from/to temporary byte arrays as streams
-	/// </summary>
-	public class ByteArrayReaderWriter : IDisposable
+    /// <summary>
+    /// Helper class for a quick non-allocating way to read or write from/to temporary byte arrays as streams
+    /// </summary>
+    public class ByteArrayReaderWriter : IDisposable
 	{
 		protected static Queue<ByteArrayReaderWriter> readerPool = new Queue<ByteArrayReaderWriter>();
 

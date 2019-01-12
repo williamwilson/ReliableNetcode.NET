@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
 
 namespace ReliableNetcode.Utils
 {
-	internal static class DateTimeEx
+    internal static class DateTimeEx
 	{
 		public static double GetTotalSeconds(this DateTime time)
 		{

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+using System;
 using ReliableNetcode.Utils;
 
 namespace ReliableNetcode
 {
-	/// <summary>
-	/// Quality-of-service type for a message
-	/// </summary>
-	public enum QosType : byte
+    /// <summary>
+    /// Quality-of-service type for a message
+    /// </summary>
+    public enum QosType : byte
 	{
 		/// <summary>
 		/// Message is guaranteed to arrive and in order

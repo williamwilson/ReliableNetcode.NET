@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using ReliableNetcode.Utils;
 
 namespace ReliableNetcode
 {
-	internal class SequenceBuffer<T> where T : class, new()
+    internal class SequenceBuffer<T> where T : class, new()
 	{
 		private const uint NULL_SEQUENCE = 0xFFFFFFFF;
 

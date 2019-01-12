@@ -1,14 +1,11 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ReliableNetcode.Utils
 {
-	/// <summary>
-	/// Helper methods for allocating temporary buffers
-	/// </summary>
-	public static class BufferPool
+    /// <summary>
+    /// Helper methods for allocating temporary buffers
+    /// </summary>
+    public static class BufferPool
 	{
 		private static Dictionary<int, Queue<byte[]>> bufferPool = new Dictionary<int, Queue<byte[]>>();
 
